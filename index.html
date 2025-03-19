@@ -1,15 +1,18 @@
-03.19 18:33
+03.19 18:42
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>测试页面</title>
-    <link rel="stylesheet" href="/namejingjichang/zh.json">
 </head>
 <body>
     <div class="text">Hello world!</div>
-    <script></script>
+    <script>
+fetch('/namejingjichang/zh.json')
+  .then(response => response.json())
+  .then(data => console.log(data));
+</script>
 </body>
 </html>
 
